@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrade_3b</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="img/LOGO1.ico" alt="60" height="70">
+                <ul class="nav-links">
+                    <li><a href="#sobre-nosotros">SOBRE NOSOTROS</a></li>
+                    <li><a href="#descubrir">DESCUBRIR</a></li>
+                    <li><a href="#proyectos">PROYECTOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li><a href="#">SERVICIO</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="#">Help</a>
+                <a href="#">🌐 EN</a>
+                <a href="#" class="btn-login">Log in | Sign up</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+        </div>
+
+        <div class="booking-container">
+            <div class="booking-tabs">
+                <button class="tab-btn active" onclick="switchTab(event, 'definicion')"><i
+                        class="fa-solid fa-microchip"></i> ¿Qué es?</button>
+                <button class="tab-btn" onclick="switchTab(event, 'componentes')"><i class="fa-solid fa-plug"></i>
+                    Componentes</button>
+                <button class="tab-btn" onclick="switchTab(event, 'utilidad')"><i class="fa-solid fa-gears"></i> ¿Para
+                    qué sirve?</button>
+                <button class="tab-btn" onclick="switchTab(event, 'futuro')"><i class="fa-solid fa-atom"></i>
+                    Importancia</button>
+            </div>
+
+            <div class="booking-form">
+                <div class="form-inputs" style="border: none; display: flex; gap: 20px; flex-wrap: wrap;">
+
+                    <div id="definicion" class="tab-content active-content" style="flex: 1; min-width: 250px;">
+                        <div class="input-field" style="border: none;">
+                            <label style="color: #5c0632; font-size: 13px;">La Electrónica</label>
+                            <p style="font-size: 14px; line-height: 1.5; color: #333; margin-top: 5px;">
+                                Es la rama de la física aplicada que se encarga del control y flujo de los electrones u
+                                otras partículas cargadas eléctricamente. A diferencia de la electricidad común, la
+                                electrónica procesa información mediante señales eléctricas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="componentes" class="tab-content" style="flex: 1; min-width: 250px; display: none;">
+                        <div class="input-field" style="border: none;">
+                            <label style="color: #5c0632; font-size: 13px;">Componentes Básicos</label>
+                            <ul
+                                style="font-size: 14px; line-height: 1.4; color: #333; margin-top: 5px; padding-left: 15px;">
+                                <li><strong>Resistencias:</strong> Limitan el paso de la corriente.</li>
+                                <li><strong>Condensadores:</strong> Almacenan energía temporalmente.</li>
+                                <li><strong>Diodos/LEDs:</strong> Permiten el flujo en una sola dirección.</li>
+                                <li><strong>Transistores:</strong> Amplifican o cortan señales eléctricas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="utilidad" class="tab-content" style="flex: 1; min-width: 250px; display: none;">
+                        <div class="input-field" style="border: none;">
+                            <label style="color: #5c0632; font-size: 13px;">¿Para qué sirve?</label>
+                            <p style="font-size: 14px; line-height: 1.5; color: #333; margin-top: 5px;">
+                                Permite automatizar procesos, transmitir datos a grandes distancias y crear sistemas
+                                inteligentes. Es el pilar fundamental que hace funcionar computadoras, teléfonos
+                                celulares, equipos médicos y sistemas de transporte.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="futuro" class="tab-content" style="flex: 1; min-width: 250px; display: none;">
+                        <div class="input-field" style="border: none;">
+                            <label style="color: #5c0632; font-size: 13px;">Importancia del Futuro</label>
+                            <p style="font-size: 14px; line-height: 1.5; color: #333; margin-top: 5px;">
+                                La electrónica es la columna vertebral del avance tecnológico. Su evolución es clave
+                                para el desarrollo de la inteligencia artificial, el internet de las cosas (IoT), las
+                                energías renovables y la computación cuántica que definirán las próximas décadas.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cards-section">
+        <h2>Conceptos clave and aplicaciones</h2>
+
+        <div class="cards-grid" id="cardsGrid">
+            <div class="card" onclick="toggleCardFocus(this)">
+                <img src="img/micro_chip.jpg" alt="Circuitos Integrados" class="card-img">
+                <div class="card-body">
+                    <h3>Circuitos Integrados y Microchips</h3>
+                </div>
+                <div class="card-footer">
+                    <span>Ver componentes</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCardFocus(this)">
+                <img src="img/automa.jpg" alt="Automatización y Robótica" class="card-img">
+                <div class="card-body">
+                    <h3>Sistemas de Automatización y Robótica</h3>
+                </div>
+                <div class="card-footer">
+                    <span>Ver aplicaciones</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCardFocus(this)">
+                <img src="img/teleco.jpg" alt="Telecomunicaciones" class="card-img">
+                <div class="card-body">
+                    <h3>Procesamiento de Señales y Telecomunicaciones</h3>
+                </div>
+                <div class="card-footer">
+                    <span>Leer más</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCardFocus(this)">
+                <img src="img/futur.png" alt="Futuro de la Electrónica" class="card-img">
+                <div class="card-body">
+                    <h3>El Futuro de la Electrónica e IA</h3>
+                </div>
+                <div class="card-footer">
+                    <span>Explorar tendencias</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECCIÓN 1: SOBRE NOSOTROS -->
+    <section class="info-section" id="sobre-nosotros">
+        <div class="info-container">
+            <div class="info-text">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una plataforma enfocada en el aprendizaje, desarrollo e innovación dentro de la electrónica, robótica e informática. Diseñamos contenidos y proyectos enfocados en la educación tecnológica para comprender el mundo del hardware y los sistemas digitales.</p>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>+100</h3>
+                        <p>Proyectos Desarrollados</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>100%</h3>
+                        <p>Innovación en Hardware</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-img-box">
+                <img src="img/automa.jpg" alt="Sobre Nosotros" class="info-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: DESCUBRIR -->
+    <section class="cards-section" id="descubrir">
+        <h2>Descubrir: Datos Curiosos e Interesantes</h2>
+        <div class="discover-grid">
+            <div class="discover-card">
+                <div class="discover-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>La velocidad del silicio</h3>
+                <p>Los transistores modernos en los procesadores pueden cambiar de estado de encendido a apagado más de mil millones de veces por segundo.</p>
+            </div>
+            <div class="discover-card">
+                <div class="discover-icon"><i class="fa-solid fa-microchip"></i></div>
+                <h3>Ley de Moore</h3>
+                <p>El número de transistores en un microchip se ha duplicado aproximadamente cada dos años, impulsando el crecimiento de la tecnología.</p>
+            </div>
+            <div class="discover-card">
+                <div class="discover-icon"><i class="fa-solid fa-wifi"></i></div>
+                <h3>El origen del Wi-Fi</h3>
+                <p>Los principios fundamentales del Wi-Fi derivan de una patente de comunicaciones inalámbricas ideada por la actriz e inventora Hedy Lamarr.</p>
+            </div>
+            <div class="discover-card">
+                <div class="discover-icon"><i class="fa-solid fa-bug"></i></div>
+                <h3>El primer Bug real</h3>
+                <p>El término "bug" informático se popularizó en 1947 cuando una polilla atrapada en un relé causó un fallo en la computadora Mark II.</p>
+            </div>
+            <div class="discover-card">
+                <div class="discover-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                <h3>Superconductores</h3>
+                <p>A temperaturas cercanas al cero absoluto (-273 °C), ciertos materiales no ofrecen ninguna resistencia eléctrica, logrando corriente continua sin pérdida de energía.</p>
+            </div>
+            <div class="discover-card">
+                <div class="discover-icon"><i class="fa-solid fa-memory"></i></div>
+                <h3>Apolo 11 y la memoria</h3>
+                <p>La computadora de navegación del Apolo 11 tenía solo 64 KB de memoria y funcionaba a una frecuencia de 0.043 MHz, mucho menos que un reloj digital actual.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: PROYECTOS DESTACADOS (Rutas corrigidas a .jpg minúscula) -->
+    <section class="cards-section" id="proyectos">
+        <h2>Proyectos y Experimentos Destacados</h2>
+        <div class="cards-grid" id="projectsGrid">
+            
+            <div class="card card-proyecto" onclick="openImageModal('img/p1.jpg')">
+                <img src="img/p1.jpg" alt="Proyecto 1" class="card-img card-img-proyecto">
+            </div>
+
+            <div class="card card-proyecto" onclick="openImageModal('img/p2.jpg')">
+                <img src="img/p2.jpg" alt="Proyecto 2" class="card-img card-img-proyecto">
+            </div>
+
+            <div class="card card-proyecto" onclick="openImageModal('img/p3.jpg')">
+                <img src="img/p3.jpg" alt="Proyecto 3" class="card-img card-img-proyecto">
+            </div>
+
+            <div class="card card-proyecto" onclick="openImageModal('img/p4.jpg')">
+                <img src="img/p4.jpg" alt="Proyecto 4" class="card-img card-img-proyecto">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: FOOTER -->
+    <footer class="site-footer" id="contacto">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Compañía</h4>
+                <ul>
+                    <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Carreras & Desarrollo</a></li>
+                    <li><a href="#">Prensa y Noticias</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Especialidades</h4>
+                <ul>
+                    <li><a href="#">Sistemas Embebidos</a></li>
+                    <li><a href="#">Automatización & Robótica</a></li>
+                    <li><a href="#">Diseño de Circuitos</a></li>
+                    <li><a href="#">Telecomunicaciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Soporte y Contacto</h4>
+                <ul>
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#"> Ig : @Electronic_dap</a></li>
+                    <li><a href="#"> 098 963 9811 </a></li>
+                    <li><a href="#">contacto@electronica.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col social-col">
+                <h4>Permanezca conectado</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Política de Cookies | Legal | Privacidad | Accesibilidad</p>
+            <p>© 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL PARA AGRANDAR IMÁGENES -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="modal-close">&times;</span>
+        <img id="modalImg" class="modal-content-img" src="" alt="Vista ampliada">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
